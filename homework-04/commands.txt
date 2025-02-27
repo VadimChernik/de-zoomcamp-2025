@@ -1,2 +1,5 @@
 # Change DBT_PROJECT_DIR
 export DBT_PROJECT_DIR=/workspaces/de-zoomcamp-2025/homework-04/ny_taxi_project/
+
+# Run without LIMIT
+ dbt build --vars '{'is_test_run': 'false'}'
