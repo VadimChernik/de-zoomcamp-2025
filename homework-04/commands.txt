@@ -1,0 +1,2 @@
+# Change DBT_PROJECT_DIR
+export DBT_PROJECT_DIR=/workspaces/de-zoomcamp-2025/homework-04/ny_taxi_project/
