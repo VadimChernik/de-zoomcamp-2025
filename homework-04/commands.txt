@@ -2,4 +2,14 @@
 export DBT_PROJECT_DIR=/workspaces/de-zoomcamp-2025/homework-04/ny_taxi_project/
 
 # Run without LIMIT
- dbt build --vars '{'is_test_run': 'false'}'
+dbt build --vars '{'is_test_run': 'false'}'
+
+export DBT_BIGQUERY_TARGET_DATASET=core
+export DBT_BIGQUERY_STAGING_DATASET=staging
+
+{{ 
+    config(
+        materialized='table',
+        schema=resolve_schema_for('staging')
+    )
+}}
